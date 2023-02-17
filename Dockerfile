@@ -7,11 +7,11 @@
 
 
 FROM python
-WORKDIR /hrproject
-COPY requirements.txt /hrproject
-EXPOSE 8000
+WORKDIR /HR0217
+COPY requirements.txt /HR0217
+EXPOSE 5000
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip3 install -r requirements.txt
-COPY . /hrproject
+COPY . /HR0217
 ENTRYPOINT ["python3"]
 CMD ["end_user.py"]
